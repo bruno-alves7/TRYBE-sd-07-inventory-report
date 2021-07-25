@@ -3,11 +3,8 @@ from statistics import mode
 
 
 class SimpleReport:
-    def __init__(self):
-        pass
-
     @classmethod
-    def generate(self, stock):
+    def generate(cls, stock):
         today = datetime.today()
         today_formated = f"{today.year}-0{today.month}-{today.day}"
 
