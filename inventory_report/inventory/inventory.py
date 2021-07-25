@@ -1,5 +1,6 @@
 from inventory_report.importer.csv_importer import CsvImporter
 from inventory_report.importer.json_importer import JsonImporter
+from inventory_report.importer.xml_importer import XmlImporter
 from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
 
@@ -16,6 +17,8 @@ class Inventory:
             return CsvImporter.import_data(filepath)
         if filepath.endswith(".json"):
             return JsonImporter.import_data(filepath)
+        if filepath.endswith(".xml"):
+            return XmlImporter.import_data(filepath)
 
     @classmethod
     def generate_report(cls, products_list, report_type):
