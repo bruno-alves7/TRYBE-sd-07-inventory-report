@@ -11,7 +11,7 @@ class JsonImporter(Importer):
         if file_extension == ".json":
             return cls.open_file(path)
         else:
-            raise ValueError("File must be a valid JSON format.")
+            raise ValueError("Arquivo inválido")
 
     @classmethod
     def open_file(cls, path):

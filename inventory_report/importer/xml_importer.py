@@ -11,7 +11,7 @@ class XmlImporter(Importer):
         if file_extension == ".xml":
             return cls.open_file(path)
         else:
-            raise ValueError("File must be a valid XML format.")
+            raise ValueError("Arquivo inválido")
 
     @classmethod
     def open_file(cls, path):

@@ -11,7 +11,7 @@ class CsvImporter(Importer):
         if file_extension == ".csv":
             return cls.open_file(path)
         else:
-            raise ValueError("File must be a valid CSV format.")
+            raise ValueError("Arquivo inválido")
 
     @classmethod
     def open_file(cls, path):
